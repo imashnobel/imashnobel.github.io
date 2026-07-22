@@ -8,10 +8,10 @@ export default function Footer() {
     <footer className="border-t border-white/5 bg-[#0a0f1e] py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2 text-sky-400 font-bold text-lg">
+        <a href="#hero" className="flex items-center gap-2 text-orange-400 font-bold text-lg">
           <FaTerminal />
           <span className="text-white">ashraf</span>
-          <span className="text-sky-400">.devops</span>
+          <span className="text-orange-400">.devops</span>
         </a>
 
         {/* Links */}
@@ -20,7 +20,7 @@ export default function Footer() {
             <a
               key={l}
               href={`#${l.toLowerCase()}`}
-              className="hover:text-sky-400 transition-colors"
+              className="hover:text-orange-400 transition-colors"
             >
               {l}
             </a>
@@ -29,13 +29,13 @@ export default function Footer() {
 
         {/* Socials */}
         <div className="flex gap-4 text-slate-500 text-xl">
-          <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
+          <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
             <FiGithub />
           </a>
-          <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors">
+          <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors">
             <FiLinkedin />
           </a>
-          <a href="mailto:ashrafuzzamannobel@gmail.com" className="hover:text-sky-400 transition-colors">
+          <a href="mailto:ashrafuzzamannobel@gmail.com" className="hover:text-orange-400 transition-colors">
             <FiMail />
           </a>
         </div>

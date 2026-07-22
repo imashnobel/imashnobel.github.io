@@ -34,7 +34,7 @@ export default function Navbar() {
         <a href="#hero" className="flex items-center gap-2 font-bold text-xl">
           <Image src="/logo.svg" alt="Ashrafuzzaman logo" width={32} height={32} className="rounded-lg" />
           <span className="text-white">ashraf</span>
-          <span className="text-sky-400">.devops</span>
+          <span className="text-orange-400">.devops</span>
         </a>
 
         {/* Desktop Links */}
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-slate-400 hover:text-sky-400 text-sm font-medium transition-colors duration-200"
+                className="text-slate-400 hover:text-orange-400 text-sm font-medium transition-colors duration-200"
               >
                 {l.label}
               </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
             <a
               href="/Ashrafuzzaman_Resume_DevOps.pdf"
               download
-              className="flex items-center gap-1.5 border border-sky-500/40 hover:border-sky-400 text-sky-400 hover:text-sky-300 text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+              className="flex items-center gap-1.5 border border-orange-500/40 hover:border-orange-400 text-orange-400 hover:text-orange-300 text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
             >
               <FiDownload className="text-base" />
               Resume
@@ -62,7 +62,7 @@ export default function Navbar() {
           <li>
             <a
               href="#contact"
-              className="bg-sky-500 hover:bg-sky-400 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+              className="bg-orange-500 hover:bg-orange-400 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
             >
               Hire Me
             </a>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block text-slate-300 hover:text-sky-400 text-base font-medium transition-colors"
+                  className="block text-slate-300 hover:text-orange-400 text-base font-medium transition-colors"
                 >
                   {l.label}
                 </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
               <a
                 href="/Ashrafuzzaman_Resume_DevOps.pdf"
                 download
-                className="flex items-center justify-center gap-2 border border-sky-500/40 text-sky-400 text-sm font-semibold px-4 py-2 rounded-lg"
+                className="flex items-center justify-center gap-2 border border-orange-500/40 text-orange-400 text-sm font-semibold px-4 py-2 rounded-lg"
               >
                 <FiDownload />
                 Download Resume
@@ -107,7 +107,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="block bg-sky-500 hover:bg-sky-400 text-white text-center text-sm font-semibold px-4 py-2 rounded-lg"
+                className="block bg-orange-500 hover:bg-orange-400 text-white text-center text-sm font-semibold px-4 py-2 rounded-lg"
               >
                 Hire Me
               </a>

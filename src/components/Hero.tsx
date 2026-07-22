@@ -10,14 +10,14 @@ export default function Hero() {
     >
       {/* Gradient background blobs */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-sky-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-60 h-60 md:w-80 md:h-80 bg-indigo-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-orange-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-60 h-60 md:w-80 md:h-80 bg-amber-500/10 rounded-full blur-3xl" />
         {/* Grid lines */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(#38bdf8 1px, transparent 1px), linear-gradient(to right, #38bdf8 1px, transparent 1px)",
+              "linear-gradient(#ff9900 1px, transparent 1px), linear-gradient(to right, #ff9900 1px, transparent 1px)",
             backgroundSize: "80px 80px",
           }}
         />
@@ -29,7 +29,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs md:text-sm px-4 py-1.5 rounded-full mb-5 md:mb-6"
+          className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs md:text-sm px-4 py-1.5 rounded-full mb-5 md:mb-6"
         >
           <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
           Available for new opportunities
@@ -43,7 +43,7 @@ export default function Hero() {
           className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight"
         >
           Hi, I&apos;m{" "}
-          <span className="bg-gradient-to-r from-sky-400 to-indigo-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
             Ashrafuzzaman
           </span>
         </motion.h1>
@@ -56,7 +56,7 @@ export default function Hero() {
           className="mb-5 md:mb-6"
         >
           <p className="text-lg md:text-2xl text-slate-400 font-medium">
-            <span className="text-sky-400 font-semibold">DevOps Engineer</span>
+            <span className="text-orange-400 font-semibold">DevOps Engineer</span>
           </p>
           <p className="text-sm md:text-base text-slate-500 mt-1 tracking-wide">
             Cloud Infrastructure · CI/CD Automation · Observability
@@ -82,20 +82,20 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="w-full sm:w-auto bg-sky-500 hover:bg-sky-400 text-white font-semibold px-7 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 text-center"
+            className="w-full sm:w-auto bg-orange-500 hover:bg-orange-400 text-white font-semibold px-7 py-3 rounded-xl transition-all duration-200 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 text-center"
           >
             View My Work
           </a>
           <a
             href="#contact"
-            className="w-full sm:w-auto border border-white/10 hover:border-sky-500/50 text-slate-300 hover:text-white font-semibold px-7 py-3 rounded-xl transition-all duration-200 hover:bg-sky-500/5 text-center"
+            className="w-full sm:w-auto border border-white/10 hover:border-orange-500/50 text-slate-300 hover:text-white font-semibold px-7 py-3 rounded-xl transition-all duration-200 hover:bg-orange-500/5 text-center"
           >
             Get In Touch
           </a>
           <a
             href="/Ashrafuzzaman_Resume_DevOps.pdf"
             download
-            className="flex items-center justify-center gap-2 text-slate-400 hover:text-sky-400 font-medium transition-colors py-1"
+            className="flex items-center justify-center gap-2 text-slate-400 hover:text-orange-400 font-medium transition-colors py-1"
           >
             <FiDownload className="text-lg" />
             Resume
@@ -120,7 +120,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
-              className="text-slate-500 hover:text-sky-400 text-2xl transition-colors duration-200 p-2"
+              className="text-slate-500 hover:text-orange-400 text-2xl transition-colors duration-200 p-2"
             >
               {s.icon}
             </a>

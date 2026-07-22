@@ -15,7 +15,7 @@ const projects = [
       "Iraq's most awaited mobile wallet enabling money transfers, mobile/internet recharge, shopping, and bill payments. Maintained Jenkins CI/CD pipelines to automate build, test and deployment, and ensured PCI DSS compliance through security hardening and access controls.",
     tags: ["Jenkins", "CI/CD", "PCI DSS", "Security Hardening"],
     icons: [<SiJenkins key="jenkins" />, <FiShield key="shield" />],
-    color: "sky",
+    color: "orange",
     category: "FinTech · e-Wallet",
   },
   {
@@ -24,7 +24,7 @@ const projects = [
       "A feature-rich mobile wallet offering shopping, gaming, online card purchasing, bill payments, promotions and reward points. Containerized the application with Docker and Amazon ECR for image management, managing deployments for high availability and seamless scaling.",
     tags: ["Docker", "AWS ECR", "High Availability", "Scaling"],
     icons: [<SiDocker key="docker" />, <FiCloud key="aws" />],
-    color: "indigo",
+    color: "amber",
     category: "FinTech · Mobile Wallet",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
       "An advanced electronic Point of Sale solution with integrated Know Your Customer (KYC) capabilities for customer identity verification. Managed AWS infrastructure and Git workflows for deployment and version control across environments.",
     tags: ["AWS", "Git Workflows", "KYC", "POS"],
     icons: [<FiCloud key="aws" />, <FiDatabase key="db" />],
-    color: "amber",
+    color: "teal",
     category: "FinTech · POS",
   },
   {
@@ -57,8 +57,7 @@ const projects = [
 ];
 
 const colorBorderMap: Record<string, string> = {
-  sky: "hover:border-sky-500/40 hover:shadow-sky-500/10",
-  indigo: "hover:border-indigo-500/40 hover:shadow-indigo-500/10",
+  orange: "hover:border-orange-500/40 hover:shadow-orange-500/10",
   emerald: "hover:border-emerald-500/40 hover:shadow-emerald-500/10",
   amber: "hover:border-amber-500/40 hover:shadow-amber-500/10",
   teal: "hover:border-teal-500/40 hover:shadow-teal-500/10",
@@ -67,8 +66,7 @@ const colorBorderMap: Record<string, string> = {
 };
 
 const tagColorMap: Record<string, string> = {
-  sky: "bg-sky-500/10 text-sky-400",
-  indigo: "bg-indigo-500/10 text-indigo-400",
+  orange: "bg-orange-500/10 text-orange-400",
   emerald: "bg-emerald-500/10 text-emerald-400",
   amber: "bg-amber-500/10 text-amber-400",
   teal: "bg-teal-500/10 text-teal-400",
@@ -77,8 +75,7 @@ const tagColorMap: Record<string, string> = {
 };
 
 const catColorMap: Record<string, string> = {
-  sky: "text-sky-400",
-  indigo: "text-indigo-400",
+  orange: "text-orange-400",
   emerald: "text-emerald-400",
   amber: "text-amber-400",
   teal: "text-teal-400",
@@ -98,7 +95,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sky-400 text-sm font-semibold tracking-widest uppercase">Portfolio</span>
+          <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">Portfolio</span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Featured Projects</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
             Production fintech services I&apos;ve built, deployed and operated at Newroz Technologies.
@@ -149,10 +146,10 @@ export default function Projects() {
                   ))}
                 </div>
                 <div className="flex items-center gap-3 text-slate-500">
-                  <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors" aria-label="GitHub">
+                  <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors" aria-label="GitHub">
                     <FiGithub />
                   </a>
-                  <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors" aria-label="Link">
+                  <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-400 transition-colors" aria-label="Link">
                     <FiExternalLink />
                   </a>
                 </div>

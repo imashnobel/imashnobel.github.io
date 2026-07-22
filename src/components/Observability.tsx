@@ -21,13 +21,13 @@ const pipeline = [
     label: "Prometheus",
     sublabel: "Metrics collection",
     icon: <SiPrometheus />,
-    color: "indigo",
+    color: "amber",
   },
   {
     label: "Grafana",
     sublabel: "Dashboards · visualization",
     icon: <SiGrafana />,
-    color: "sky",
+    color: "orange",
   },
   {
     label: "CloudWatch",
@@ -39,14 +39,14 @@ const pipeline = [
 
 const capabilities = [
   {
-    icon: <FiActivity className="text-sky-400 text-xl" />,
+    icon: <FiActivity className="text-orange-400 text-xl" />,
     title: "Metrics & Dashboards",
     description:
       "Set up Prometheus scraping and Grafana dashboards to track application and infrastructure health across production services in real time.",
     projects: ["ZiCharge", "FastPay"],
   },
   {
-    icon: <FiFileText className="text-indigo-400 text-xl" />,
+    icon: <FiFileText className="text-amber-400 text-xl" />,
     title: "Centralized Logging",
     description:
       "Used Graylog and CloudWatch Logs to centralize application and infrastructure logs for fast searching and correlation during incident debugging.",
@@ -70,8 +70,8 @@ const capabilities = [
 
 const colorRing: Record<string, string> = {
   slate: "border-slate-500/30 text-slate-300 bg-slate-500/5",
-  indigo: "border-indigo-500/30 text-indigo-400 bg-indigo-500/5",
-  sky: "border-sky-500/30 text-sky-400 bg-sky-500/5",
+  amber: "border-amber-500/30 text-amber-400 bg-amber-500/5",
+  orange: "border-orange-500/30 text-orange-400 bg-orange-500/5",
   violet: "border-violet-500/30 text-violet-400 bg-violet-500/5",
 };
 
@@ -87,7 +87,7 @@ export default function Observability() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sky-400 text-sm font-semibold tracking-widest uppercase">
+          <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">
             Observability
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">
@@ -139,7 +139,7 @@ export default function Observability() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.08 }}
-              className="bg-[#0f172a] border border-white/5 rounded-2xl p-5 hover:border-sky-500/20 transition-colors flex flex-col gap-3"
+              className="bg-[#0f172a] border border-white/5 rounded-2xl p-5 hover:border-orange-500/20 transition-colors flex flex-col gap-3"
             >
               <div>{c.icon}</div>
               <h3 className="text-white font-semibold text-sm">{c.title}</h3>

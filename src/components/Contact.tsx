@@ -55,7 +55,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-sky-400 text-sm font-semibold tracking-widest uppercase">Contact</span>
+          <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">Contact</span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Let&apos;s Work Together</h2>
           <p className="text-slate-400 mt-4 max-w-xl mx-auto">
             Open to freelance projects, full-time roles and infrastructure consulting. Drop me a message!
@@ -71,8 +71,8 @@ export default function Contact() {
             className="flex flex-col gap-6"
           >
             {[
-                          { icon: <FiMail className="text-sky-400 text-xl" />, label: "Email", value: "ashrafuzzamannobel@gmail.com", href: "mailto:ashrafuzzamannobel@gmail.com" },
-              { icon: <FiMapPin className="text-indigo-400 text-xl" />, label: "Location", value: "Mirpur 12, Dhaka, Bangladesh", href: "#" },
+                          { icon: <FiMail className="text-orange-400 text-xl" />, label: "Email", value: "ashrafuzzamannobel@gmail.com", href: "mailto:ashrafuzzamannobel@gmail.com" },
+              { icon: <FiMapPin className="text-amber-400 text-xl" />, label: "Location", value: "Mirpur 12, Dhaka, Bangladesh", href: "#" },
               { icon: <FiLinkedin className="text-violet-400 text-xl" />, label: "LinkedIn", value: "linkedin.com/in/imashrafuzzaman", href: "https://www.linkedin.com/in/imashrafuzzaman/" },
               { icon: <FiGithub className="text-emerald-400 text-xl" />, label: "GitHub", value: "github.com/imashnobel", href: "https://github.com/imashnobel" },
             ].map((item) => (
@@ -81,12 +81,12 @@ export default function Contact() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 bg-[#0f172a] border border-white/5 rounded-xl p-4 hover:border-sky-500/20 transition-all group"
+                className="flex items-center gap-4 bg-[#0f172a] border border-white/5 rounded-xl p-4 hover:border-orange-500/20 transition-all group"
               >
                 <div className="flex-shrink-0">{item.icon}</div>
                 <div>
                   <p className="text-xs text-slate-500 font-medium">{item.label}</p>
-                  <p className="text-slate-200 text-sm font-medium group-hover:text-sky-400 transition-colors">{item.value}</p>
+                  <p className="text-slate-200 text-sm font-medium group-hover:text-orange-400 transition-colors">{item.value}</p>
                 </div>
               </a>
             ))}
@@ -118,7 +118,7 @@ export default function Contact() {
                     placeholder="John Doe"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-sky-500/50 transition-colors"
+                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -130,7 +130,7 @@ export default function Contact() {
                     placeholder="you@company.com"
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-sky-500/50 transition-colors"
+                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 transition-colors"
                   />
                 </div>
                 <div>
@@ -142,7 +142,7 @@ export default function Contact() {
                     placeholder="Tell me about your project..."
                     value={form.message}
                     onChange={handleChange}
-                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-sky-500/50 transition-colors resize-none"
+                    className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-slate-200 text-sm placeholder-slate-600 focus:outline-none focus:border-orange-500/50 transition-colors resize-none"
                   />
                 </div>
                 {error && (
@@ -151,7 +151,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40"
+                  className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40"
                 >
                   {loading ? (
                     <>

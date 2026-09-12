@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
     <linearGradient id="grd" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#818cf8"/>
+      <stop offset="0%" stop-color="#3ecf8e"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2.5" result="blur"/>
@@ -11,7 +11,7 @@
   </defs>
 
   <!-- Background rounded square -->
-  <rect width="100" height="100" rx="20" fill="#080d1a"/>
+  <rect width="100" height="100" rx="20" fill="#090c11"/>
 
   <!-- Border ring with gradient -->
   <rect x="2" y="2" width="96" height="96" rx="18"

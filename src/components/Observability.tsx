@@ -8,12 +8,13 @@ import {
   FiFileText,
   FiServer,
   FiArrowRight,
+  FiCheckCircle,
 } from "react-icons/fi";
 
 const pipeline = [
   {
     label: "Services",
-    sublabel: "FastPay · ZiCharge · HappyHaat",
+    sublabel: "FastPay · ZiCharge · Cardselling",
     icon: <FiServer />,
     color: "slate",
   },
@@ -21,36 +22,36 @@ const pipeline = [
     label: "Prometheus",
     sublabel: "Metrics collection",
     icon: <SiPrometheus />,
-    color: "amber",
+    color: "violet",
   },
   {
     label: "Grafana",
     sublabel: "Dashboards · visualization",
     icon: <SiGrafana />,
-    color: "orange",
+    color: "amber",
   },
   {
     label: "CloudWatch",
     sublabel: "AWS-native monitoring & alarms",
     icon: <FiActivity />,
-    color: "violet",
+    color: "emerald",
   },
 ];
 
 const capabilities = [
   {
-    icon: <FiActivity className="text-orange-400 text-xl" />,
+    icon: <FiActivity className="text-emerald-400 text-xl" />,
     title: "Metrics & Dashboards",
     description:
       "Set up Prometheus scraping and Grafana dashboards to track application and infrastructure health across production services in real time.",
     projects: ["ZiCharge", "FastPay"],
   },
   {
-    icon: <FiFileText className="text-amber-400 text-xl" />,
+    icon: <FiFileText className="text-cyan-400 text-xl" />,
     title: "Centralized Logging",
     description:
       "Used Graylog and CloudWatch Logs to centralize application and infrastructure logs for fast searching and correlation during incident debugging.",
-    projects: ["ZiCharge", "HappyHaat"],
+    projects: ["ZiCharge", "CardSelling"],
   },
   {
     icon: <FiAlertTriangle className="text-amber-400 text-xl" />,
@@ -60,44 +61,55 @@ const capabilities = [
     projects: ["ZiCharge", "FastPay"],
   },
   {
-    icon: <FiServer className="text-emerald-400 text-xl" />,
+    icon: <FiServer className="text-violet-400 text-xl" />,
     title: "Infra Monitoring",
     description:
       "Tracked EC2, RDS and container-level metrics — CPU, memory, disk, network — alongside application telemetry in one place.",
-    projects: ["ZiCharge", "Fast Connect"],
+    projects: ["ZiCharge", "ShotMob"],
   },
 ];
 
 const colorRing: Record<string, string> = {
   slate: "border-slate-500/30 text-slate-300 bg-slate-500/5",
-  amber: "border-amber-500/30 text-amber-400 bg-amber-500/5",
-  orange: "border-orange-500/30 text-orange-400 bg-orange-500/5",
   violet: "border-violet-500/30 text-violet-400 bg-violet-500/5",
+  amber: "border-amber-500/30 text-amber-400 bg-amber-500/5",
+  emerald: "border-emerald-500/30 text-emerald-400 bg-emerald-500/5",
 };
 
 export default function Observability() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="observability" className="py-28 px-6 bg-[#080d1a]">
+    <section id="monitoring" className="py-24 md:py-28 px-6">
       <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-14 md:mb-16"
         >
-          <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">
-            Observability
+          <span className="font-mono-custom text-emerald-400 text-sm">
+            <span className="text-slate-600">$</span> tail -f /var/log/production.log
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">
-            Seeing Into Production
+            Monitoring &amp; Observability
           </h2>
-          <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-slate-400 mt-4 max-w-2xl">
             I set up monitoring with Prometheus, Grafana and CloudWatch across
-            production fintech services — so problems surface as alerts,
+            production services — so problems surface as alerts,
             not as customer tickets.
           </p>
+        </motion.div>
+
+        {/* Status bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="flex items-center gap-2 font-mono-custom text-xs text-emerald-400 bg-emerald-500/[0.06] border border-emerald-500/15 rounded-lg px-4 py-2.5 mb-6"
+        >
+          <FiCheckCircle className="shrink-0" />
+          <span>all systems operational — 5/5 services reporting healthy</span>
         </motion.div>
 
         {/* Pipeline flow */}
@@ -105,7 +117,7 @@ export default function Observability() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-[#0f172a] border border-white/5 rounded-2xl p-6 md:p-8 mb-10"
+          className="bg-[#10151d] border border-white/[0.06] rounded-2xl p-6 md:p-8 mb-10"
         >
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2">
             {pipeline.map((step, i) => (
@@ -139,7 +151,7 @@ export default function Observability() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.08 }}
-              className="bg-[#0f172a] border border-white/5 rounded-2xl p-5 hover:border-orange-500/20 transition-colors flex flex-col gap-3"
+              className="bg-[#10151d] border border-white/[0.06] rounded-2xl p-5 hover:border-emerald-500/20 transition-colors flex flex-col gap-3"
             >
               <div>{c.icon}</div>
               <h3 className="text-white font-semibold text-sm">{c.title}</h3>
@@ -150,7 +162,7 @@ export default function Observability() {
                 {c.projects.map((p) => (
                   <span
                     key={p}
-                    className="text-[10px] font-medium text-slate-400 bg-white/5 border border-white/5 px-2 py-0.5 rounded-full"
+                    className="text-[10px] font-medium text-slate-400 bg-white/5 border border-white/[0.06] px-2 py-0.5 rounded-full"
                   >
                     {p}
                   </span>

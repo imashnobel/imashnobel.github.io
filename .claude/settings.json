@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(nohup google-chrome --headless=new --disable-gpu --no-sandbox --hide-scrollbars --remote-debugging-port=9333 --remote-allow-origins=* --window-size=1440,1000 --user-data-dir=/tmp/claude-1000/-media-ashrafuzzaman-AC9200FF9200CFAE-Newroz-Doc-portfolio-ashrafuzzaman-portfolio-01-ashrafuzzaman-github-io/314ee7fe-921f-4b34-a65f-12a4aeb36d69/scratchpad/chrome-profile2 about:blank)"
+    ]
+  }
+}

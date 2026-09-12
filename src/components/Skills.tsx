@@ -12,8 +12,8 @@ import { FiDatabase, FiCloud, FiTerminal, FiActivity, FiShield, FiLayers } from 
 
 const categories = [
   {
-    name: "Cloud (AWS)",
-    color: "orange",
+    name: "cloud_aws",
+    color: "emerald",
     skills: [
       { icon: <FiCloud />, name: "EC2 / RDS / S3" },
       { icon: <SiKubernetes />, name: "EKS" },
@@ -22,8 +22,8 @@ const categories = [
     ],
   },
   {
-    name: "Automation & IaC",
-    color: "amber",
+    name: "automation_iac",
+    color: "cyan",
     skills: [
       { icon: <SiTerraform />, name: "Terraform" },
       { icon: <SiAnsible />, name: "Ansible" },
@@ -32,7 +32,7 @@ const categories = [
     ],
   },
   {
-    name: "Containers & CI/CD",
+    name: "containers_cicd",
     color: "violet",
     skills: [
       { icon: <SiDocker />, name: "Docker" },
@@ -42,8 +42,8 @@ const categories = [
     ],
   },
   {
-    name: "Monitoring & Observability",
-    color: "cyan",
+    name: "monitoring",
+    color: "sky",
     skills: [
       { icon: <SiPrometheus />, name: "Prometheus" },
       { icon: <SiGrafana />, name: "Grafana" },
@@ -52,8 +52,8 @@ const categories = [
     ],
   },
   {
-    name: "Security & Networking",
-    color: "emerald",
+    name: "security_network",
+    color: "amber",
     skills: [
       { icon: <FiShield />, name: "SSL/TLS" },
       { icon: <SiCloudflare />, name: "Cloudflare" },
@@ -62,8 +62,8 @@ const categories = [
     ],
   },
   {
-    name: "Databases",
-    color: "yellow",
+    name: "databases",
+    color: "rose",
     skills: [
       { icon: <SiMysql />, name: "MySQL" },
       { icon: <SiPostgresql />, name: "PostgreSQL" },
@@ -71,8 +71,8 @@ const categories = [
     ],
   },
   {
-    name: "OS, Source Control & Languages",
-    color: "rose",
+    name: "os_scm_lang",
+    color: "slate",
     skills: [
       { icon: <SiUbuntu />, name: "Ubuntu / CentOS" },
       { icon: <SiGit />, name: "Git / GitHub" },
@@ -83,41 +83,44 @@ const categories = [
 ];
 
 const colorMap: Record<string, string> = {
-  orange: "border-orange-500/20 hover:border-orange-500/50 group-hover:text-orange-400",
-  amber: "border-amber-500/20 hover:border-amber-500/50 group-hover:text-amber-400",
-  violet: "border-violet-500/20 hover:border-violet-500/50 group-hover:text-violet-400",
   emerald: "border-emerald-500/20 hover:border-emerald-500/50 group-hover:text-emerald-400",
-  yellow: "border-yellow-500/20 hover:border-yellow-500/50 group-hover:text-yellow-400",
-  rose: "border-rose-500/20 hover:border-rose-500/50 group-hover:text-rose-400",
   cyan: "border-cyan-500/20 hover:border-cyan-500/50 group-hover:text-cyan-400",
+  violet: "border-violet-500/20 hover:border-violet-500/50 group-hover:text-violet-400",
+  sky: "border-sky-500/20 hover:border-sky-500/50 group-hover:text-sky-400",
+  amber: "border-amber-500/20 hover:border-amber-500/50 group-hover:text-amber-400",
+  rose: "border-rose-500/20 hover:border-rose-500/50 group-hover:text-rose-400",
+  slate: "border-slate-500/20 hover:border-slate-500/50 group-hover:text-slate-300",
 };
 
 const titleColorMap: Record<string, string> = {
-  orange: "text-orange-400",
-  amber: "text-amber-400",
-  violet: "text-violet-400",
   emerald: "text-emerald-400",
-  yellow: "text-yellow-400",
-  rose: "text-rose-400",
   cyan: "text-cyan-400",
+  violet: "text-violet-400",
+  sky: "text-sky-400",
+  amber: "text-amber-400",
+  rose: "text-rose-400",
+  slate: "text-slate-400",
 };
 
 export default function Skills() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="skills" className="py-28 px-6 bg-[#080d1a]">
+    <section id="skills" className="py-24 md:py-28 px-6">
       <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-14 md:mb-16"
         >
-          <span className="text-orange-400 text-sm font-semibold tracking-widest uppercase">Tech Stack</span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Skills & Tools</h2>
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
-            8+ years in IT, 3+ years focused on cloud and DevOps — the technologies I use daily to build and operate production infrastructure.
+          <span className="font-mono-custom text-emerald-400 text-sm">
+            <span className="text-slate-600">$</span> cat skills.json
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Skills &amp; Tools</h2>
+          <p className="text-slate-400 mt-4 max-w-xl">
+            8+ years in IT, 3+ years focused on cloud and DevOps — the technologies I use daily
+            to build and operate production infrastructure.
           </p>
         </motion.div>
 
@@ -127,11 +130,13 @@ export default function Skills() {
               key={cat.name}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: ci * 0.1 }}
-              className="bg-[#0f172a] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-all"
+              transition={{ delay: ci * 0.08 }}
+              className="bg-[#10151d] border border-white/[0.06] rounded-2xl p-6 hover:border-white/10 transition-all"
             >
-              <h3 className={`text-sm font-semibold mb-4 ${titleColorMap[cat.color]}`}>
+              <h3 className={`font-mono-custom text-sm font-semibold mb-4 ${titleColorMap[cat.color]}`}>
+                <span className="text-slate-600">&quot;</span>
                 {cat.name}
+                <span className="text-slate-600">&quot;:</span>
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 {cat.skills.map((s) => (

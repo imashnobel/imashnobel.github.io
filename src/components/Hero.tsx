@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
 
 type Line = { prompt?: boolean; text: string; className?: string };
@@ -69,6 +70,23 @@ export default function Hero() {
       <div className="max-w-5xl mx-auto px-5 md:px-6 w-full grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-10 items-center">
         {/* Left: intro text */}
         <div className="text-center lg:text-left">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.05, duration: 0.4 }}
+            className="relative block w-fit mx-auto lg:mx-0 mb-5"
+          >
+            <div className="absolute -inset-1 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-full blur-md opacity-40" />
+            <Image
+              src="/profile.jpg"
+              alt="M. Ashrafuzzaman"
+              width={112}
+              height={112}
+              priority
+              className="relative rounded-full w-24 h-24 lg:w-28 lg:h-28 object-cover border-2 border-emerald-400/40 shadow-xl shadow-black/40"
+            />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}

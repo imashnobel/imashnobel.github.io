@@ -51,7 +51,7 @@ export default function Experience() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.08 });
 
   return (
-    <section id="experience" className="py-24 md:py-28 px-6 bg-[#080a0f]">
+    <section id="experience" className="py-24 md:py-28 px-6 bg-slate-50 dark:bg-[#080a0f]">
       <div className="max-w-4xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,15 +59,15 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-14 md:mb-16"
         >
-          <span className="font-mono-custom text-emerald-400 text-sm">
-            <span className="text-slate-600">$</span> git log --oneline --author=ashraf
+          <span className="font-mono-custom text-emerald-600 dark:text-emerald-400 text-sm">
+            <span className="text-slate-400 dark:text-slate-600">$</span> git log --oneline --author=ashraf
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Experience</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-3">Experience</h2>
         </motion.div>
 
         <div className="relative pl-8 md:pl-10">
           {/* vertical line */}
-          <div className="absolute left-[7px] md:left-[9px] top-2 bottom-2 w-px bg-gradient-to-b from-emerald-500/40 via-white/10 to-transparent" />
+          <div className="absolute left-[7px] md:left-[9px] top-2 bottom-2 w-px bg-gradient-to-b from-emerald-500/40 via-black/10 dark:via-white/10 to-transparent" />
 
           <div className="flex flex-col gap-10">
             {roles.map((r, i) => (
@@ -83,29 +83,29 @@ export default function Experience() {
                   className={`absolute -left-8 md:-left-10 top-1.5 w-[15px] h-[15px] md:w-[19px] md:h-[19px] rounded-full border-2 ${
                     r.current
                       ? "bg-emerald-400 border-emerald-300 shadow-[0_0_0_4px_rgba(62,207,142,0.15)]"
-                      : "bg-[#10151d] border-slate-600"
+                      : "bg-white dark:bg-[#10151d] border-slate-300 dark:border-slate-600"
                   }`}
                 />
 
-                <div className="bg-[#10151d] border border-white/[0.06] rounded-xl p-5 md:p-6 hover:border-emerald-500/20 transition-colors">
+                <div className="bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-xl p-5 md:p-6 hover:border-emerald-500/30 dark:hover:border-emerald-500/20 transition-colors">
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1.5">
-                    <h3 className="text-white font-semibold text-base md:text-lg">{r.title}</h3>
+                    <h3 className="text-slate-900 dark:text-white font-semibold text-base md:text-lg">{r.title}</h3>
                     {r.current && (
-                      <span className="font-mono-custom text-[10px] uppercase tracking-wide bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                      <span className="font-mono-custom text-[10px] uppercase tracking-wide bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full">
                         current
                       </span>
                     )}
                   </div>
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm mb-1">
-                    <span className="text-emerald-400 font-medium">{r.company}</span>
-                    <span className="text-slate-600">·</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-medium">{r.company}</span>
+                    <span className="text-slate-400 dark:text-slate-600">·</span>
                     <span className="text-slate-500">{r.meta}</span>
                   </div>
                   <p className="font-mono-custom text-xs text-slate-500 mb-4">{r.period}</p>
                   <ul className="flex flex-col gap-2">
                     {r.points.map((p, pi) => (
-                      <li key={pi} className="flex gap-2.5 text-sm text-slate-400 leading-relaxed">
-                        <span className="text-slate-600 mt-0.5 shrink-0">▸</span>
+                      <li key={pi} className="flex gap-2.5 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <span className="text-slate-400 dark:text-slate-600 mt-0.5 shrink-0">▸</span>
                         <span>{p}</span>
                       </li>
                     ))}

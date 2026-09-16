@@ -58,7 +58,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 bg-[#080a0f]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 md:pt-32 bg-white dark:bg-[#080a0f]"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
@@ -91,7 +91,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono-custom px-3.5 py-1.5 rounded-full mb-6"
+            className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono-custom px-3.5 py-1.5 rounded-full mb-6"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -104,7 +104,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-2 leading-[1.05] tracking-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-2 leading-[1.05] tracking-tight"
           >
             M.{" "}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
@@ -116,17 +116,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28 }}
-            className="font-mono-custom text-base md:text-lg text-slate-300 mb-6"
+            className="font-mono-custom text-base md:text-lg text-slate-700 dark:text-slate-300 mb-6"
           >
-            DevOps Engineer <span className="text-slate-600">·</span>{" "}
-            <span className="text-slate-400">building infrastructure that just keeps running</span>
+            DevOps Engineer <span className="text-slate-400 dark:text-slate-600">·</span>{" "}
+            <span className="text-slate-600 dark:text-slate-400">building infrastructure that just keeps running</span>
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35 }}
-            className="max-w-lg mx-auto lg:mx-0 text-slate-400 text-base md:text-lg leading-relaxed mb-9"
+            className="max-w-lg mx-auto lg:mx-0 text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed mb-9"
           >
             I&apos;m a DevOps Engineer designing and operating AWS infrastructure for
             production platforms across fintech, ecommerce and beyond — CI/CD, containers
@@ -148,14 +148,14 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="w-full sm:w-auto border border-white/10 hover:border-emerald-500/40 text-slate-300 hover:text-white font-semibold px-7 py-3 rounded-xl transition-all duration-200 hover:bg-emerald-500/5 text-center"
+              className="w-full sm:w-auto border border-slate-300 dark:border-white/10 hover:border-emerald-500/40 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-semibold px-7 py-3 rounded-xl transition-all duration-200 hover:bg-emerald-500/5 text-center"
             >
               Get In Touch
             </a>
             <a
               href="/Ashrafuzzaman_Resume_DevOps.pdf"
               download
-              className="flex items-center justify-center gap-2 text-slate-400 hover:text-emerald-400 font-medium transition-colors py-1"
+              className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors py-1"
             >
               <FiDownload className="text-lg" />
               Resume
@@ -179,7 +179,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="text-slate-500 hover:text-emerald-400 text-xl transition-colors duration-200 p-2 -m-2"
+                className="text-slate-500 hover:text-emerald-600 dark:hover:text-emerald-400 text-xl transition-colors duration-200 p-2 -m-2"
               >
                 {s.icon}
               </a>

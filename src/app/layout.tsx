@@ -17,13 +17,27 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitScript = `
+  (function () {
+    try {
+      var stored = localStorage.getItem('theme');
+      if (stored === 'light') {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (e) {}
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="dark scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} ${inter.className} antialiased`}>
         {children}
       </body>

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import { FiServer, FiCloud, FiShield, FiActivity } from "react-icons/fi";
 
 const highlights = [
-  { icon: <FiCloud className="text-emerald-400 text-xl" />, text: "Manage and optimize AWS cloud infrastructure — EC2, RDS, S3, IAM, ECS, EKS, CloudWatch — for cost-effective, highly available production systems" },
-  { icon: <FiServer className="text-cyan-400 text-xl" />, text: "Run FastPay, ZiCharge, ShotMob, TktatIQ & CardSelling in production — spanning fintech, ecommerce, sports and ticketing" },
-  { icon: <FiShield className="text-amber-400 text-xl" />, text: "Ship changes safely with CI/CD — GitHub Actions, Jenkins & CodeDeploy — backed by Terraform for repeatable, auditable deployments" },
-  { icon: <FiActivity className="text-violet-400 text-xl" />, text: "Catch issues before customers do — using Prometheus, Grafana, CloudWatch, OpenTelemetry, and the LGTM Stack for full-stack observability, alerting, and faster root-cause analysis." },
+  { icon: <FiCloud className="text-emerald-600 dark:text-emerald-400 text-xl" />, text: "Manage and optimize AWS cloud infrastructure — EC2, RDS, S3, IAM, ECS, EKS, CloudWatch — for cost-effective, highly available production systems" },
+  { icon: <FiServer className="text-cyan-600 dark:text-cyan-400 text-xl" />, text: "Run FastPay, ZiCharge, ShotMob, TktatIQ & CardSelling in production — spanning fintech, ecommerce, sports and ticketing" },
+  { icon: <FiShield className="text-amber-600 dark:text-amber-400 text-xl" />, text: "Ship changes safely with CI/CD — GitHub Actions, Jenkins & CodeDeploy — backed by Terraform for repeatable, auditable deployments" },
+  { icon: <FiActivity className="text-violet-600 dark:text-violet-400 text-xl" />, text: "Catch issues before customers do — using Prometheus, Grafana, CloudWatch, OpenTelemetry, and the LGTM Stack for full-stack observability, alerting, and faster root-cause analysis." },
 ];
 
 const stats = [
@@ -28,10 +28,10 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-14 md:mb-16"
         >
-          <span className="font-mono-custom text-emerald-400 text-sm">
-            <span className="text-slate-600">$</span> cat about.md
+          <span className="font-mono-custom text-emerald-600 dark:text-emerald-400 text-sm">
+            <span className="text-slate-400 dark:text-slate-600">$</span> cat about.md
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-3">
             Who I Am
           </h2>
         </motion.div>
@@ -101,17 +101,17 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.1 }}
-                className="flex items-start gap-4 bg-[#10151d] border border-white/[0.06] rounded-xl p-5 hover:border-emerald-500/20 transition-colors"
+                className="flex items-start gap-4 bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-xl p-5 hover:border-emerald-500/30 dark:hover:border-emerald-500/20 transition-colors"
               >
                 <div className="mt-0.5 flex-shrink-0">{h.icon}</div>
-                <p className="text-slate-300 text-sm leading-relaxed">{h.text}</p>
+                <p className="text-slate-700 dark:text-slate-300 text-sm leading-relaxed">{h.text}</p>
               </motion.div>
             ))}
 
             <div className="grid grid-cols-3 gap-4 mt-2">
               {stats.map((s) => (
-                <div key={s.label} className="bg-[#10151d] border border-white/[0.06] rounded-xl p-4 text-center">
-                  <div className="font-mono-custom text-2xl font-bold text-emerald-400">{s.val}</div>
+                <div key={s.label} className="bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-xl p-4 text-center">
+                  <div className="font-mono-custom text-2xl font-bold text-emerald-600 dark:text-emerald-400">{s.val}</div>
                   <div className="text-xs text-slate-500 mt-1">{s.label}</div>
                 </div>
               ))}

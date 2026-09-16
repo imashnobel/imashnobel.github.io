@@ -55,11 +55,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-14 md:mb-16"
         >
-          <span className="font-mono-custom text-emerald-400 text-sm">
-            <span className="text-slate-600">$</span> ssh ashraf@get-in-touch
+          <span className="font-mono-custom text-emerald-600 dark:text-emerald-400 text-sm">
+            <span className="text-slate-400 dark:text-slate-600">$</span> ssh ashraf@get-in-touch
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Let&apos;s Work Together</h2>
-          <p className="text-slate-400 mt-4 max-w-xl">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-3">Let&apos;s Work Together</h2>
+          <p className="text-slate-600 dark:text-slate-400 mt-4 max-w-xl">
             Open to freelance projects, full-time roles and infrastructure consulting. Drop me a message!
           </p>
         </motion.div>
@@ -73,22 +73,22 @@ export default function Contact() {
             className="flex flex-col gap-4"
           >
             {[
-              { icon: <FiMail className="text-emerald-400 text-xl" />, label: "Email", value: "ashrafuzzamannobel@gmail.com", href: "mailto:ashrafuzzamannobel@gmail.com" },
-              { icon: <FiMapPin className="text-cyan-400 text-xl" />, label: "Location", value: "Mirpur 12, Dhaka, Bangladesh", href: "#" },
-              { icon: <FiLinkedin className="text-violet-400 text-xl" />, label: "LinkedIn", value: "linkedin.com/in/imashrafuzzaman", href: "https://www.linkedin.com/in/imashrafuzzaman/" },
-              { icon: <FiGithub className="text-slate-300 text-xl" />, label: "GitHub", value: "github.com/imashnobel", href: "https://github.com/imashnobel" },
+              { icon: <FiMail className="text-emerald-600 dark:text-emerald-400 text-xl" />, label: "Email", value: "ashrafuzzamannobel@gmail.com", href: "mailto:ashrafuzzamannobel@gmail.com" },
+              { icon: <FiMapPin className="text-cyan-600 dark:text-cyan-400 text-xl" />, label: "Location", value: "Mirpur 12, Dhaka, Bangladesh", href: "#" },
+              { icon: <FiLinkedin className="text-violet-600 dark:text-violet-400 text-xl" />, label: "LinkedIn", value: "linkedin.com/in/imashrafuzzaman", href: "https://www.linkedin.com/in/imashrafuzzaman/" },
+              { icon: <FiGithub className="text-slate-700 dark:text-slate-300 text-xl" />, label: "GitHub", value: "github.com/imashnobel", href: "https://github.com/imashnobel" },
             ].map((item) => (
               <a
                 key={item.label}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 bg-[#10151d] border border-white/[0.06] rounded-xl p-4 hover:border-emerald-500/20 transition-all group"
+                className="flex items-center gap-4 bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-xl p-4 hover:border-emerald-500/30 dark:hover:border-emerald-500/20 transition-all group"
               >
                 <div className="flex-shrink-0">{item.icon}</div>
                 <div>
                   <p className="font-mono-custom text-xs text-slate-500">{item.label}</p>
-                  <p className="text-slate-200 text-sm font-medium group-hover:text-emerald-400 transition-colors">{item.value}</p>
+                  <p className="text-slate-800 dark:text-slate-200 text-sm font-medium group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{item.value}</p>
                 </div>
               </a>
             ))}

@@ -40,28 +40,28 @@ const pipeline = [
 
 const capabilities = [
   {
-    icon: <FiActivity className="text-emerald-400 text-xl" />,
+    icon: <FiActivity className="text-emerald-600 dark:text-emerald-400 text-xl" />,
     title: "Metrics & Dashboards",
     description:
       "Set up Prometheus scraping and Grafana dashboards to track application and infrastructure health across production services in real time.",
     projects: ["ZiCharge", "FastPay"],
   },
   {
-    icon: <FiFileText className="text-cyan-400 text-xl" />,
+    icon: <FiFileText className="text-cyan-600 dark:text-cyan-400 text-xl" />,
     title: "Centralized Logging",
     description:
       "Used Graylog and CloudWatch Logs to centralize application and infrastructure logs for fast searching and correlation during incident debugging.",
     projects: ["ZiCharge", "CardSelling"],
   },
   {
-    icon: <FiAlertTriangle className="text-amber-400 text-xl" />,
+    icon: <FiAlertTriangle className="text-amber-600 dark:text-amber-400 text-xl" />,
     title: "Alerting & Incident Response",
     description:
       "Investigated production incidents with CloudWatch and Performance Insights, ran root cause analysis, and set up alerting to catch issues before customers report them.",
     projects: ["ZiCharge", "FastPay"],
   },
   {
-    icon: <FiServer className="text-violet-400 text-xl" />,
+    icon: <FiServer className="text-violet-600 dark:text-violet-400 text-xl" />,
     title: "Infra Monitoring",
     description:
       "Tracked EC2, RDS and container-level metrics — CPU, memory, disk, network — alongside application telemetry in one place.",
@@ -70,10 +70,10 @@ const capabilities = [
 ];
 
 const colorRing: Record<string, string> = {
-  slate: "border-slate-500/30 text-slate-300 bg-slate-500/5",
-  violet: "border-violet-500/30 text-violet-400 bg-violet-500/5",
-  amber: "border-amber-500/30 text-amber-400 bg-amber-500/5",
-  emerald: "border-emerald-500/30 text-emerald-400 bg-emerald-500/5",
+  slate: "border-slate-400/40 dark:border-slate-500/30 text-slate-700 dark:text-slate-300 bg-slate-500/5",
+  violet: "border-violet-500/40 dark:border-violet-500/30 text-violet-700 dark:text-violet-400 bg-violet-500/5",
+  amber: "border-amber-500/40 dark:border-amber-500/30 text-amber-700 dark:text-amber-400 bg-amber-500/5",
+  emerald: "border-emerald-500/40 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 bg-emerald-500/5",
 };
 
 export default function Observability() {
@@ -88,13 +88,13 @@ export default function Observability() {
           transition={{ duration: 0.6 }}
           className="mb-14 md:mb-16"
         >
-          <span className="font-mono-custom text-emerald-400 text-sm">
-            <span className="text-slate-600">$</span> tail -f /var/log/production.log
+          <span className="font-mono-custom text-emerald-600 dark:text-emerald-400 text-sm">
+            <span className="text-slate-400 dark:text-slate-600">$</span> tail -f /var/log/production.log
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-3">
             Monitoring &amp; Observability
           </h2>
-          <p className="text-slate-400 mt-4 max-w-2xl">
+          <p className="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl">
             I set up monitoring with Prometheus, Grafana and CloudWatch across
             production services — so problems surface as alerts,
             not as customer tickets.
@@ -106,7 +106,7 @@ export default function Observability() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="flex items-center gap-2 font-mono-custom text-xs text-emerald-400 bg-emerald-500/[0.06] border border-emerald-500/15 rounded-lg px-4 py-2.5 mb-6"
+          className="flex items-center gap-2 font-mono-custom text-xs text-emerald-700 dark:text-emerald-400 bg-emerald-500/[0.06] border border-emerald-500/15 rounded-lg px-4 py-2.5 mb-6"
         >
           <FiCheckCircle className="shrink-0" />
           <span>all systems operational — 5/5 services reporting healthy</span>
@@ -117,7 +117,7 @@ export default function Observability() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="bg-[#10151d] border border-white/[0.06] rounded-2xl p-6 md:p-8 mb-10"
+          className="bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-2xl p-6 md:p-8 mb-10"
         >
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-2">
             {pipeline.map((step, i) => (
@@ -127,7 +127,7 @@ export default function Observability() {
                 >
                   <span className="text-xl shrink-0">{step.icon}</span>
                   <div className="min-w-0">
-                    <p className="text-sm font-semibold text-white leading-tight">
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white leading-tight">
                       {step.label}
                     </p>
                     <p className="text-xs text-slate-500 leading-tight mt-0.5 truncate">
@@ -136,7 +136,7 @@ export default function Observability() {
                   </div>
                 </div>
                 {i < pipeline.length - 1 && (
-                  <FiArrowRight className="hidden md:block text-slate-600 shrink-0" />
+                  <FiArrowRight className="hidden md:block text-slate-400 dark:text-slate-600 shrink-0" />
                 )}
               </div>
             ))}
@@ -151,18 +151,18 @@ export default function Observability() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 + i * 0.08 }}
-              className="bg-[#10151d] border border-white/[0.06] rounded-2xl p-5 hover:border-emerald-500/20 transition-colors flex flex-col gap-3"
+              className="bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-2xl p-5 hover:border-emerald-500/30 dark:hover:border-emerald-500/20 transition-colors flex flex-col gap-3"
             >
               <div>{c.icon}</div>
-              <h3 className="text-white font-semibold text-sm">{c.title}</h3>
-              <p className="text-slate-400 text-xs leading-relaxed flex-1">
+              <h3 className="text-slate-900 dark:text-white font-semibold text-sm">{c.title}</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-xs leading-relaxed flex-1">
                 {c.description}
               </p>
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {c.projects.map((p) => (
                   <span
                     key={p}
-                    className="text-[10px] font-medium text-slate-400 bg-white/5 border border-white/[0.06] px-2 py-0.5 rounded-full"
+                    className="text-[10px] font-medium text-slate-600 dark:text-slate-400 bg-black/[0.02] dark:bg-white/5 border border-slate-200 dark:border-white/[0.06] px-2 py-0.5 rounded-full"
                   >
                     {p}
                   </span>

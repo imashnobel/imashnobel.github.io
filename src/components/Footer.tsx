@@ -4,13 +4,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/[0.06] bg-[#080a0f] py-10 px-6">
+    <footer className="border-t border-slate-200 dark:border-white/[0.06] bg-slate-50 dark:bg-[#080a0f] py-10 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 font-mono-custom font-semibold text-lg">
-          <span className="text-slate-500">~/</span>
-          <span className="text-white">ashraf</span>
-          <span className="text-emerald-400">.sh</span>
+          <span className="text-slate-400 dark:text-slate-500">~/</span>
+          <span className="text-slate-900 dark:text-white">ashraf</span>
+          <span className="text-emerald-600 dark:text-emerald-400">.sh</span>
         </a>
 
         {/* Links */}
@@ -19,7 +19,7 @@ export default function Footer() {
             <a
               key={l}
               href={`#${l}`}
-              className="hover:text-emerald-400 transition-colors"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
             >
               {l}
             </a>
@@ -28,20 +28,20 @@ export default function Footer() {
 
         {/* Socials */}
         <div className="flex gap-4 text-slate-500 text-xl">
-          <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors" aria-label="GitHub">
+          <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" aria-label="GitHub">
             <FiGithub />
           </a>
-          <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" aria-label="LinkedIn">
             <FiLinkedin />
           </a>
-          <a href="mailto:ashrafuzzamannobel@gmail.com" className="hover:text-emerald-400 transition-colors" aria-label="Email">
+          <a href="mailto:ashrafuzzamannobel@gmail.com" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" aria-label="Email">
             <FiMail />
           </a>
         </div>
       </div>
 
-      <div className="text-center mt-8 font-mono-custom text-slate-600 text-xs">
-        © {year} Md Ashrafuzzaman — built with Next.js &amp; Tailwind CSS
+      <div className="text-center mt-8 font-mono-custom text-slate-500 dark:text-slate-600 text-xs">
+        © {year} M. Ashrafuzzaman — built with Next.js &amp; Tailwind CSS
       </div>
     </footer>
   );

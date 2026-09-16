@@ -78,28 +78,28 @@ const colorBorderMap: Record<string, string> = {
 };
 
 const tagColorMap: Record<string, string> = {
-  emerald: "bg-emerald-500/10 text-emerald-400",
-  cyan: "bg-cyan-500/10 text-cyan-400",
-  violet: "bg-violet-500/10 text-violet-400",
-  amber: "bg-amber-500/10 text-amber-400",
-  sky: "bg-sky-500/10 text-sky-400",
-  rose: "bg-rose-500/10 text-rose-400",
+  emerald: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400",
+  cyan: "bg-cyan-500/10 text-cyan-700 dark:text-cyan-400",
+  violet: "bg-violet-500/10 text-violet-700 dark:text-violet-400",
+  amber: "bg-amber-500/10 text-amber-700 dark:text-amber-400",
+  sky: "bg-sky-500/10 text-sky-700 dark:text-sky-400",
+  rose: "bg-rose-500/10 text-rose-700 dark:text-rose-400",
 };
 
 const catColorMap: Record<string, string> = {
-  emerald: "text-emerald-400",
-  cyan: "text-cyan-400",
-  violet: "text-violet-400",
-  amber: "text-amber-400",
-  sky: "text-sky-400",
-  rose: "text-rose-400",
+  emerald: "text-emerald-600 dark:text-emerald-400",
+  cyan: "text-cyan-600 dark:text-cyan-400",
+  violet: "text-violet-600 dark:text-violet-400",
+  amber: "text-amber-600 dark:text-amber-400",
+  sky: "text-sky-600 dark:text-sky-400",
+  rose: "text-rose-600 dark:text-rose-400",
 };
 
 export default function Projects() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section id="projects" className="py-24 md:py-28 px-6 bg-[#080a0f]">
+    <section id="projects" className="py-24 md:py-28 px-6 bg-slate-50 dark:bg-[#080a0f]">
       <div className="max-w-6xl mx-auto" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -107,11 +107,11 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-14 md:mb-16"
         >
-          <span className="font-mono-custom text-emerald-400 text-sm">
-            <span className="text-slate-600">$</span> ls -la ./projects
+          <span className="font-mono-custom text-emerald-600 dark:text-emerald-400 text-sm">
+            <span className="text-slate-400 dark:text-slate-600">$</span> ls -la ./projects
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Featured Projects</h2>
-          <p className="text-slate-400 mt-4 max-w-xl">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mt-3">Featured Projects</h2>
+          <p className="text-slate-600 dark:text-slate-400 mt-4 max-w-xl">
             Production platforms I&apos;ve built, deployed and operated — spanning fintech, EV charging, sports and ticketing.
           </p>
         </motion.div>
@@ -123,7 +123,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.08 }}
-              className={`group relative bg-[#10151d] border border-white/[0.06] rounded-2xl p-6 flex flex-col gap-4 transition-all duration-300 hover:shadow-xl ${colorBorderMap[p.color]}`}
+              className={`group relative bg-white dark:bg-[#10151d] border border-slate-200 dark:border-white/[0.06] shadow-sm dark:shadow-none rounded-2xl p-6 flex flex-col gap-4 transition-all duration-300 hover:shadow-xl ${colorBorderMap[p.color]}`}
             >
               {/* Category */}
               <span className={`text-xs font-semibold tracking-wide ${catColorMap[p.color]}`}>
@@ -132,14 +132,14 @@ export default function Projects() {
 
               {/* Title */}
               <div>
-                <h3 className="text-white font-bold text-lg leading-snug">
+                <h3 className="text-slate-900 dark:text-white font-bold text-lg leading-snug">
                   {p.title}
                 </h3>
                 <p className="text-slate-500 text-xs mt-0.5">{p.subtitle}</p>
               </div>
 
               {/* Description */}
-              <p className="text-slate-400 text-sm leading-relaxed flex-1">
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed flex-1">
                 {p.description}
               </p>
 
@@ -156,17 +156,17 @@ export default function Projects() {
               </div>
 
               {/* Footer icons */}
-              <div className="flex items-center justify-between pt-2 border-t border-white/[0.06]">
-                <div className="flex gap-3 text-slate-600 text-xl">
+              <div className="flex items-center justify-between pt-2 border-t border-slate-200 dark:border-white/[0.06]">
+                <div className="flex gap-3 text-slate-400 dark:text-slate-600 text-xl">
                   {p.icons.map((icon, idx) => (
                     <span key={idx}>{icon}</span>
                   ))}
                 </div>
                 <div className="flex items-center gap-3 text-slate-500">
-                  <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors" aria-label="GitHub">
+                  <a href="https://github.com/imashnobel" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" aria-label="GitHub">
                     <FiGithub />
                   </a>
-                  <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors" aria-label="Link">
+                  <a href="https://www.linkedin.com/in/imashrafuzzaman/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors" aria-label="Link">
                     <FiExternalLink />
                   </a>
                 </div>

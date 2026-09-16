@@ -119,8 +119,7 @@ export default function Skills() {
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mt-3">Skills &amp; Tools</h2>
           <p className="text-slate-400 mt-4 max-w-xl">
-            8+ years in IT, 3+ years focused on cloud and DevOps — the technologies I use daily
-            to build and operate production infrastructure.
+            The technologies I use daily to build and operate production infrastructure.
           </p>
         </motion.div>
 
